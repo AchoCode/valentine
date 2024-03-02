@@ -1,0 +1,98 @@
+body {
+    background-image: url('/static/images/bg2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    height: 100vh;
+    place-items: center;
+}
+.wrapper {
+    height: 500px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+.image-pop-up {
+    background-image: url('/static/images/wybvs.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    margin-top: 20px;
+    height: 750px;
+    width: 400px;
+    border: 1px solid white;
+    position: relative;
+
+}
+.image-pop-up.noBtn {
+    background-image: url('/static/images/second.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    margin-top: 20px;
+    height: 750px;
+    width: 400px;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+.image-pop-up.happy {
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+
+}
+img{
+    position: absolute;
+    top: -200px;
+    left: 70px;
+}
+img.hide{
+    display: none;
+}
+.cta-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+}
+.cta-btn .btn {
+    border: 2px solid red;
+    border-radius: 10px;
+    color: red;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: white;
+    font-size: 20px;
+    padding: 5px 20px;
+    margin-top: 20px;
+}
+#noBtn{
+    transition: 1s;
+    position: absolute;
+    left: 52%;
+}
+h3 {
+    color: white;
+    text-align: center;
+    
+}
+.show,
+.view{
+  display: none;
+}
+.happy-msg{
+    opacity: 0;
+}
+.said-yes {
+    position: absolute;
+    top: 250px;
+}
