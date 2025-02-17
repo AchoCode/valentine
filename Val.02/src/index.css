@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Birthstone&family=Delius&family=Sacramento&display=swap");
+:root {
+  --outline: 2px solid red;
+  --img-overlay: linear-gradient(rgb(0, 0, 0, 0.4), rgb(0, 0, 0, 0.4));
+  --BirthStone-font: "Birthstone";
+  --sacramento-font: "Sacramento";
+  --delius-font: "Delius";
+  font-size: 1.5rem;
+  font-family: var(--delius-font);
+  --primary: rgb(219, 9, 9);
+  --primary-hover: rgb(73, 12, 12);
+  --secondary: pink;
+  --secondary-hover: rgb(230, 156, 168);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.timer-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.644);
+  backdrop-filter: blur(20px);
+  z-index: 3;
+}
+.timer-overlay p {
+  margin: 20px 10px;
+}
+.nav-back {
+  position: absolute;
+  color: white;
+  top: 20px;
+  left: 20px;
+}
+.nav-back svg {
+  background-color: var(--secondary);
+  padding: 5px 10px;
+  font-size: 1.6rem;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+.nav-back svg:hover {
+  background-color: var(--secondary-hover);
+}
+.page-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  color: white;
+  position: relative;
+  background-image: var(--img-overlay), url("assets/bg2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.btn-container {
+  padding: 5px 50px 5px 30px;
+  background-color: var(--primary);
+  border-radius: 50px;
+  transition: 0.3s;
+  box-shadow: 0 5px 10px 4px rgba(255, 255, 255, 0.468);
+}
+.btn-container:hover {
+  background-color: var(--primary-hover);
+}
+.btn-container a {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+
+  position: relative;
+}
+a svg {
+  position: absolute;
+  right: -35px;
+}
+
+.loader-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.heart {
+  height: 90px;
+  width: 90px;
+  background: var(--primary);
+  margin-top: 40px;
+  transition: 0.3s;
+}
+.heart::after,
+.heart::before {
+  content: "";
+  display: block;
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  position: absolute;
+  background: var(--primary);
+  z-index: -1;
+  transition: 0.3s;
+}
+.heart::after {
+  top: 0;
+  left: 50px;
+}
+.heart::before {
+  left: 0px;
+  top: -50px;
+}
+.tile:hover,
+.heart::after:hover,
+.heart::before:hover {
+  background-color: var(--primary-hover);
+}
+.tile span {
+  position: absolute;
+}
+.carousel {
+  position: relative;
+  width: 100vw;
+  height: 70vh;
+  overflow: hidden;
+}
+.carousel-track {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+  height: 100%;
+}
+.carousel-item {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  padding: 40px;
+}
+.details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  position: absolute;
+  bottom: 0px;
+  left: 20px;
+  background-color: var(--secondary);
+}
+.carousel-btn {
+  position: absolute;
+  bottom: 2%;
+  border: none;
+  cursor: pointer;
+  padding: 12px 15px;
+  border-radius: 50%;
+  z-index: 10;
+  background-color: transparent;
+}
+.prev-btn {
+  background-color: white;
+  right: 90px;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+.prev-btn:hover {
+  background-color: white;
+}
+.next-btn {
+  right: 30px;
+  background-color: var(--primary);
+  color: white;
+}
+.next-btn:hover {
+  background-color: var(--primary);
+}
+.avatar {
+  width: 90vw;
+  border-radius: 10px;
+}
+.header {
+  width: 40%;
+}
+.review label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.review label::before {
+  content: "";
+  display: block;
+  background: lime;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+}
+

@@ -1,0 +1,44 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 0 10px;
+}
+.heading {
+  text-align: center;
+  font-family: var(--BirthStone-font);
+  font-size: 1.9rem;
+}
+p {
+  text-align: center;
+  margin: 0 0 40px;
+}
+.sweet-name {
+  font-family: var(--sacramento-font);
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  text-shadow: 3px 3px 20px rgb(178, 12, 12);
+}
+.sweet-name svg {
+  font-size: 1.5rem;
+}
+.tile-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 50px;
+}
+.tile-container svg {
+  font-size: 5rem;
+  color: var(--secondary);
+  transition: 0.3s;
+}
+.tile-container svg:hover {
+  color: var(--secondary-hover);
+}

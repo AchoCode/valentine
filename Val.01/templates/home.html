@@ -33,9 +33,6 @@
           <h3 class="happy-msg">I love you!!</h3>
           <div id='fireworks'>
             <img class='hide' src='https://media.tenor.com/q3TvcYy2frcAAAAi/fireworks-deepavali.gif'>
-            <audio id='myaudio'>
-                <source src="{{ url_for('static", filename='valaudio.mp3' )}} type='audio/mp3'>
-            </audio>
           </div>
         </div>
     </div>
@@ -64,7 +61,7 @@
     // Generate random position within the screen
     const newX = Math.random() * (screenWidth - button.clientWidth);
     const newY = Math.random() * (screenHeight - button.clientHeight);
-    const audio = document.getElementById('myaudio')
+    
 
     // Set new position
     button.style.left = newX + 'px';
@@ -88,7 +85,6 @@
       msg.style.opacity = '1'
     })
     btns.classList.add('show')
-    audio.play()
   }
 </script>
 </html>
